@@ -1,2 +1,84 @@
 # BMIT
-BMIT — structure-first coding framework for AI agents: Blast / Mid / Inner at altitude, then T1 structural → T2 bug/ops → T3 adversarial.
+
+BMIT is Ross Shaw's practical coding framework for AI agents: **Blast**, **Mid**, and **Inner** write code at different altitudes, then **T1 structural**, **T2 bug/ops**, and **T3 adversarial** test it in order.
+
+**Version:** 0.1.0
+**Tagline:** structure first, function second, attack third.
+
+## Use BMIT with an AI coding agent in under 5 minutes
+
+1. Clone this repo into the project where you want agent help.
+2. Point your agent at [`AGENTS.md`](./AGENTS.md).
+3. Load one build prompt based on the altitude of the work:
+   - system or repo shape -> [`prompts/blast.md`](./prompts/blast.md)
+   - subsystem or feature slice -> [`prompts/mid.md`](./prompts/mid.md)
+   - local file or unit change -> [`prompts/inner.md`](./prompts/inner.md)
+4. Have the agent write code at that altitude. BMIT is **not** spec first, plan first, then one implementer. The build layer should produce code at its own scope.
+5. Run the test loop in order:
+   - [`prompts/t1-structural.md`](./prompts/t1-structural.md)
+   - [`prompts/t2-bug-ops.md`](./prompts/t2-bug-ops.md)
+   - [`prompts/t3-adversarial.md`](./prompts/t3-adversarial.md)
+6. If T3 finds a structural problem, restart through T1, route correction back to Blast, Mid, or Inner, then run T2 and T3 again.
+
+That is the whole public cut: load the right prompt, write at the right altitude, then test in the right order.
+
+## B / M / I: three coding altitudes
+
+### Blast
+**Blast** writes system-level code and structure.
+
+Use Blast when the job changes repo shape, service boundaries, top-level interfaces, shared contracts, deployment structure, or the skeleton of a new capability.
+
+### Mid
+**Mid** writes subsystem code.
+
+Use Mid when the job is bigger than a local patch but smaller than a system redesign: a feature slice, a service module, an integration surface, or a subsystem refactor.
+
+### Inner
+**Inner** writes local unit code.
+
+Use Inner when the job is contained to a few files, functions, tests, or adapters. Inner can borrow the good taste of structured vibe coding: reuse what exists, keep changes tight, and avoid premature DRY. That is style guidance only, not the whole method.
+
+## T1 -> T2 -> T3 test loop
+
+Run tests in this order.
+
+### T1 structural
+T1 looks for structural issues: wrong boundaries, logic at the wrong altitude, leaky abstractions, broken file ownership, missing interfaces, or misplaced cross-cutting concerns.
+
+T1 does not behave like a general bug fixer. Its job is to decide whether the code is shaped correctly and to route correction back to the right writer: Inner, Mid, or Blast.
+
+### T2 bug / ops
+T2 fixes bugs and operational issues directly when the structure is already sound.
+
+If T2 discovers the issue is actually architectural, it escalates back to T1 instead of papering over the problem locally.
+
+### T3 adversarial
+T3 attacks the result: edge cases, misuse, race conditions, weird inputs, brittle assumptions, security posture, rollback paths, and failure behavior.
+
+If T3 finds a **structural** problem, the loop restarts like this:
+
+**T3 -> T1 -> B/M/I correction -> T2 -> T3**
+
+That restart rule matters. Structural breakage should be repaired structurally, not patched over as a local bug.
+
+## What this is not
+
+- **Not a fact-checker.** BMIT is a coding and testing framework, not a truth engine.
+- **Not GitHub Spec Kit.** Spec Kit is spec -> plan -> tasks -> implement -> converge. BMIT is multiple coding altitudes plus a staged test loop.
+- **Not Ponytail-style or "lazy senior" prompting.** That taste can help Inner write tighter local code, but BMIT is broader than reuse advice.
+- **Not a multi-agent org chart.** This public cut does not define management layers, bot hierarchies, or private automation.
+- **Not red/blue testing alone.** Adversarial testing is T3 only, not the whole method.
+
+See [`docs/COMPARISON.md`](./docs/COMPARISON.md) for a short side-by-side.
+
+## Repository contents
+
+- [`AGENTS.md`](./AGENTS.md) - routing card for which prompt to load
+- [`prompts/`](./prompts/) - loadable instructions for each build and test role
+- [`docs/COMPARISON.md`](./docs/COMPARISON.md) - short comparison to adjacent public methods
+- [`examples/session.md`](./examples/session.md) - fictional walkthrough of a small feature through the loop
+
+## License
+
+MIT. See [`LICENSE`](./LICENSE).
