@@ -2,7 +2,7 @@
 
 BMIT is Ross Shaw's practical coding framework for AI agents: **Blast**, **Mid**, and **Inner** write code at different altitudes, then **T1 structural**, **T2 bug/ops**, and **T3 adversarial** test it in order.
 
-**Version:** 0.1.0
+**Version:** 1.0.0
 **Tagline:** structure first, function second, attack third.
 
 ## Use BMIT with an AI coding agent in under 5 minutes
@@ -21,6 +21,8 @@ BMIT is Ross Shaw's practical coding framework for AI agents: **Blast**, **Mid**
 6. If T3 finds a structural problem, restart through T1, route correction back to Blast, Mid, or Inner, then run T2 and T3 again.
 
 That is the whole public cut: load the right prompt, write at the right altitude, then test in the right order.
+
+See [`docs/HANDOFFS.md`](./docs/HANDOFFS.md) for the required handoff packet and routing rules. A stage may recommend a fix from its own vantage, but the owning altitude still decides and implements the change.
 
 ## B / M / I: three coding altitudes
 
@@ -87,6 +89,7 @@ See [`docs/COMPARISON.md`](./docs/COMPARISON.md) for a short side-by-side.
 
 - [`AGENTS.md`](./AGENTS.md) - routing card for which prompt to load
 - [`prompts/`](./prompts/) - loadable instructions for each build and test role
+- [`docs/HANDOFFS.md`](./docs/HANDOFFS.md) - required handoff packet and ownership rules
 - [`docs/COMPARISON.md`](./docs/COMPARISON.md) - short comparison to adjacent public methods
 - [`examples/session.md`](./examples/session.md) - fictional walkthrough of a small feature through the loop
 

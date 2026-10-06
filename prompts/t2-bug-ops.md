@@ -24,6 +24,11 @@ Do not smuggle in architecture work when the real issue is structural.
 If the fix requires changing system or subsystem shape, escalate back to **T1**.
 Do not turn this into open-ended polish.
 
-## Handoff
-- If the issue is architectural, route back to **T1 structural**.
-- If the result is functionally stable, hand off to **T3 adversarial**.
+## Communication / handoff
+Use the packet in [`docs/HANDOFFS.md`](../docs/HANDOFFS.md) for every outbound handoff.
+
+- If the issue is architectural or ownership is unclear, route back to **T1 structural** with the required packet.
+- If the issue is non-structural, **T2** owns choosing and implementing the direct bug or ops fix.
+- If the result is functionally stable, hand off to **T3 adversarial** with the required packet.
+- You may recommend a structural fix when escalating, but mark it as advice only.
+- Do **not** decide, merge, or silently apply a **Blast**, **Mid**, or **Inner** fix instead of routing it.

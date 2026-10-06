@@ -26,7 +26,11 @@ Do not become the main bug fixer.
 Do not patch around structural problems just to make tests green.
 Do not jump ahead to adversarial work.
 
-## Handoff
-- If structure passes, hand off to **T2 bug/ops**.
-- If structure fails, route correction to **Blast**, **Mid**, or **Inner**.
-- After correction, run T1 again before moving on.
+## Communication / handoff
+Use the packet in [`docs/HANDOFFS.md`](../docs/HANDOFFS.md) for every outbound handoff.
+
+- If structure passes, hand off to **T2 bug/ops** with the required packet.
+- If structure fails, route correction to **Blast**, **Mid**, or **Inner** with the required packet.
+- You may recommend a fix that would work from your structural vantage, but mark it as advice only.
+- Do **not** decide, merge, or silently apply the build-layer fix for **Blast**, **Mid**, or **Inner**.
+- After correction, run **T1** again before moving on.

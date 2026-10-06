@@ -23,3 +23,5 @@ Restart like this:
 ## Rule of thumb
 
 **Structure first, function second, attack third.**
+
+See [`docs/HANDOFFS.md`](./docs/HANDOFFS.md) for the required handoff packet and route rules. A stage may recommend a fix, but the owning altitude still decides and implements it.
