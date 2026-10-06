@@ -2,6 +2,9 @@
 
 BMIT is Ross Shaw's practical coding framework for AI agents: **Blast**, **Mid**, and **Inner** write code at different altitudes, then **T1 structural**, **T2 bug/ops**, and **T3 adversarial** test it in order.
 
+> **Open newsletter / public write-up goes live 3:00 PM PT today.**
+> Fuller BMIT explanation: [NEWSLETTER_URL]
+
 **Version:** 1.0.0
 **Tagline:** structure first, function second, attack third.
 
