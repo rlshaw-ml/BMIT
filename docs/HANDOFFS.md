@@ -2,7 +2,7 @@
 
 ## Why handoffs exist
 
-In BMIT, one layer can know there is a problem without owning the best fix.
+In BlastLoop, one layer can know there is a problem without owning the best fix.
 
 Seeing the problem and deciding the fix are different responsibilities. The sender's job is to pass a usable packet. The owning altitude's job is to decide what changes and edit the code at that scope.
 

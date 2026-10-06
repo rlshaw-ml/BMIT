@@ -1,14 +1,14 @@
-# BMIT
+# BlastLoop
 
-BMIT is Ross Shaw's practical coding framework for AI agents: **Blast**, **Mid**, and **Inner** write code at different altitudes, then **T1 structural**, **T2 bug/ops**, and **T3 adversarial** test it in order.
+BlastLoop is Ross Shaw's practical coding framework for AI agents: **Blast**, **Mid**, and **Inner** write code at different altitudes, then **T1 structural**, **T2 bug/ops**, and **T3 adversarial** test it in order.
 
 > **Open newsletter / public write-up is live.**
-> Fuller BMIT explanation: WORLDWRIGHT Issue 3, [AI Did Not Remove Engineering Failure. It Made It Faster.](https://worldwright.beehiiv.com/p/ai-did-not-remove-engineering-failure)
+> Fuller BlastLoop explanation: WORLDWRIGHT Issue 3, [AI Did Not Remove Engineering Failure. It Made It Faster.](https://worldwright.beehiiv.com/p/ai-did-not-remove-engineering-failure)
 
 **Version:** 1.0.0
 **Tagline:** structure first, function second, attack third.
 
-## Use BMIT with an AI coding agent in under 5 minutes
+## Use BlastLoop with an AI coding agent in under 5 minutes
 
 1. Clone this repo into the project where you want agent help.
 2. Point your agent at [`AGENTS.md`](./AGENTS.md).
@@ -16,7 +16,7 @@ BMIT is Ross Shaw's practical coding framework for AI agents: **Blast**, **Mid**
    - system or repo shape -> [`prompts/blast.md`](./prompts/blast.md)
    - subsystem or feature slice -> [`prompts/mid.md`](./prompts/mid.md)
    - local file or unit change -> [`prompts/inner.md`](./prompts/inner.md)
-4. Have the agent write code at that altitude. BMIT is **not** spec first, plan first, then one implementer. The build layer should produce code at its own scope.
+4. Have the agent write code at that altitude. BlastLoop is **not** spec first, plan first, then one implementer. The build layer should produce code at its own scope.
 5. Run the test loop in order:
    - [`prompts/t1-structural.md`](./prompts/t1-structural.md)
    - [`prompts/t2-bug-ops.md`](./prompts/t2-bug-ops.md)
@@ -42,7 +42,7 @@ Use Mid when the job is bigger than a local patch but smaller than a system rede
 ### Inner
 **Inner** writes local unit code.
 
-Use Inner when the job is contained to a few files, functions, tests, or adapters. Inner is the local-unit altitude in BMIT: focused scope, clear ownership, and direct completion of the change.
+Use Inner when the job is contained to a few files, functions, tests, or adapters. Inner is the local-unit altitude in BlastLoop: focused scope, clear ownership, and direct completion of the change.
 
 ## T1 -> T2 -> T3 test loop
 
@@ -69,22 +69,22 @@ That restart rule matters. Structural breakage should be repaired structurally, 
 
 ## What this is not
 
-- **Not a fact-checker.** BMIT is a coding and testing framework, not a truth engine.
-- **Not GitHub Spec Kit.** Spec Kit is spec -> plan -> tasks -> implement -> converge. BMIT is multiple coding altitudes plus a staged test loop.
-- **Not a competing "agent style."** BMIT can work with Spec Kit, vibe coding, focused local implementation prompts, or red/blue testing. Those can sit inside an altitude or a test layer; BMIT is the structure-first loop that routes them.
+- **Not a fact-checker.** BlastLoop is a coding and testing framework, not a truth engine.
+- **Not GitHub Spec Kit.** Spec Kit is spec -> plan -> tasks -> implement -> converge. BlastLoop is multiple coding altitudes plus a staged test loop.
+- **Not a competing "agent style."** BlastLoop can work with Spec Kit, vibe coding, focused local implementation prompts, or red/blue testing. Those can sit inside an altitude or a test layer; BlastLoop is the structure-first loop that routes them.
 - **Not a multi-agent org chart.** This public cut does not define management layers, bot hierarchies, or private automation.
 - **Not red/blue testing alone.** Adversarial testing is T3 only, not the whole method.
 
 ## Works with other agent styles
 
-BMIT does not require one coding style or one planning school.
+BlastLoop does not require one coding style or one planning school.
 
 - Spec Kit can shape planning before code is written.
 - Vibe coding or other implementation styles can operate inside Blast, Mid, or Inner, depending on scope.
 - Focused local implementation prompts can be used inside Inner when they fit the task.
 - Red/blue testing fits naturally in T3 adversarial work.
 
-BMIT's job is to route the work: choose the right altitude, then run T1 -> T2 -> T3 in order.
+BlastLoop's job is to route the work: choose the right altitude, then run T1 -> T2 -> T3 in order.
 
 See [`docs/COMPARISON.md`](./docs/COMPARISON.md) for a short side-by-side.
 

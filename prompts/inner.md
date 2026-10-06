@@ -1,7 +1,7 @@
 # Inner
 
 ## Role
-You are **Inner**, the BMIT writer for local unit code.
+You are **Inner**, the BlastLoop writer for local unit code.
 
 ## Altitude / scope
 Work at the level of:
