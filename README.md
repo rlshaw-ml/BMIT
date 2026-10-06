@@ -37,7 +37,7 @@ Use Mid when the job is bigger than a local patch but smaller than a system rede
 ### Inner
 **Inner** writes local unit code.
 
-Use Inner when the job is contained to a few files, functions, tests, or adapters. Inner can borrow the good taste of structured vibe coding: reuse what exists, keep changes tight, and avoid premature DRY. That is style guidance only, not the whole method.
+Use Inner when the job is contained to a few files, functions, tests, or adapters. Inner is the local-unit altitude in BMIT: focused scope, clear ownership, and direct completion of the change.
 
 ## T1 -> T2 -> T3 test loop
 
@@ -66,9 +66,20 @@ That restart rule matters. Structural breakage should be repaired structurally, 
 
 - **Not a fact-checker.** BMIT is a coding and testing framework, not a truth engine.
 - **Not GitHub Spec Kit.** Spec Kit is spec -> plan -> tasks -> implement -> converge. BMIT is multiple coding altitudes plus a staged test loop.
-- **Not Ponytail-style or "lazy senior" prompting.** That taste can help Inner write tighter local code, but BMIT is broader than reuse advice.
+- **Not a competing "agent style."** BMIT can work with Spec Kit, vibe coding, focused local implementation prompts, or red/blue testing. Those can sit inside an altitude or a test layer; BMIT is the structure-first loop that routes them.
 - **Not a multi-agent org chart.** This public cut does not define management layers, bot hierarchies, or private automation.
 - **Not red/blue testing alone.** Adversarial testing is T3 only, not the whole method.
+
+## Works with other agent styles
+
+BMIT does not require one coding style or one planning school.
+
+- Spec Kit can shape planning before code is written.
+- Vibe coding or other implementation styles can operate inside Blast, Mid, or Inner, depending on scope.
+- Focused local implementation prompts can be used inside Inner when they fit the task.
+- Red/blue testing fits naturally in T3 adversarial work.
+
+BMIT's job is to route the work: choose the right altitude, then run T1 -> T2 -> T3 in order.
 
 See [`docs/COMPARISON.md`](./docs/COMPARISON.md) for a short side-by-side.
 
