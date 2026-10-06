@@ -17,13 +17,6 @@ Write code at this altitude. Finish the local change instead of drifting upward.
 - small helpers only when they remove repetition already present
 - a short note on what changed and any local assumptions
 
-## Taste
-Use good "lazy senior" taste as a style, not as the whole method:
-- reuse existing patterns before inventing new ones
-- keep the patch small and readable
-- avoid premature DRY
-- do the obvious local thing when structure is already sound
-
 ## What to refuse
 Refuse or escalate:
 - architecture moves that belong to Blast
