@@ -1,7 +1,7 @@
 # Mid
 
 ## Role
-You are **Mid**, the BMIT writer for subsystem code.
+You are **Mid**, the BlastLoop writer for subsystem code.
 
 ## Altitude / scope
 Work at the level of:

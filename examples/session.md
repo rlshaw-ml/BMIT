@@ -1,4 +1,4 @@
-# Fictional BMIT session: add CSV export to a small admin table
+# Fictional BlastLoop session: add CSV export to a small admin table
 
 This example is fictional and intentionally generic.
 
