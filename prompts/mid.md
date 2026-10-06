@@ -34,10 +34,14 @@ Refuse or escalate:
 - keep file ownership and responsibilities obvious
 - create only the abstractions this subsystem already needs
 
-## Handoff
-When Mid is done, hand off like this:
-1. name the local units now ready for implementation or cleanup
-2. send local edits to Inner when the remaining work is file-bound
-3. send boundary conflicts back to Blast when subsystem work exposes a system issue
+## Communication / handoff
+Use the packet in [`docs/HANDOFFS.md`](../docs/HANDOFFS.md) for every outbound handoff.
 
-If T1 later reports a structural issue in this subsystem, take the correction here.
+- If the remaining work is file-bound, hand off to **Inner** with the required packet.
+- If subsystem work exposes a system issue, hand off to **Blast** with the required packet.
+- If Mid-level build work is complete, hand off to **T1 structural** with the required packet.
+- You may recommend a fix that would work from your subsystem vantage, but mark it as advice only.
+- Do **not** decide, merge, or silently apply **Blast** architecture choices or **Inner** local implementation choices for them.
+- Name any subsystem boundary or contract the next owner must preserve.
+
+If **T1** later reports a structural issue in this subsystem, take the correction here.

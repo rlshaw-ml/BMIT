@@ -36,10 +36,13 @@ If the task is actually smaller than system scope, route it down.
 - avoid burying cross-cutting concerns in local files
 - leave room for downstream implementation instead of overfilling details
 
-## Handoff
-When Blast is done, hand off like this:
-1. name the subsystem or local areas now enabled
-2. say whether Mid or Inner should take the next step
-3. note any contract the next layer must preserve
+## Communication / handoff
+Use the packet in [`docs/HANDOFFS.md`](../docs/HANDOFFS.md) for every outbound handoff.
 
-If later testing finds a structural problem, expect T1 to route work back here.
+- If scope drops to a subsystem or local unit, hand off to **Mid** or **Inner** with the required packet.
+- If Blast-level build work is complete, hand off to **T1 structural** with the required packet.
+- You may recommend a subsystem or local fix that would work from your vantage, but mark it as advice only.
+- Do **not** decide, merge, or silently apply **Mid** or **Inner** implementation choices for them.
+- Name any top-level contract the next owner must preserve.
+
+If later testing finds a structural problem, expect **T1** to route work back here.

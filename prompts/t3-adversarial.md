@@ -24,8 +24,12 @@ Do not rewrite the feature because you prefer a different design.
 Do not skip directly to local patches when the failure is structural.
 Do not present generic fear without a concrete attack path.
 
-## Handoff
-- If you find a **structural** problem, route to **T1 structural**.
+## Communication / handoff
+Use the packet in [`docs/HANDOFFS.md`](../docs/HANDOFFS.md) for every outbound handoff.
+
+- If you find a **structural** problem, route to **T1 structural** with the required packet.
 - Then follow the restart loop: **T1 -> Blast/Mid/Inner correction -> T2 -> T3**.
-- If you find only non-structural bugs, send them to **T2 bug/ops**.
-- If the result holds up, report residual risk and stop.
+- If you find only non-structural bugs, send them to **T2 bug/ops** with the required packet.
+- If the result holds up, report residual risk and stop with a pass packet.
+- You may recommend a fix that would block the attack path, but mark it as advice only.
+- Do **not** decide, merge, or silently apply a **Blast**, **Mid**, **Inner**, or **T2** fix for another layer.

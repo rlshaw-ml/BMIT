@@ -24,10 +24,12 @@ Refuse or escalate:
 - broad cleanup unrelated to the task
 - clever abstractions added only for future possibility
 
-## Handoff
-When Inner is done, hand off to **T1 structural** first.
+## Communication / handoff
+Use the packet in [`docs/HANDOFFS.md`](../docs/HANDOFFS.md) for every outbound handoff.
 
-Include:
-1. the files changed
-2. the local behavior added or fixed
-3. any suspicion that the issue might actually be structural
+- If local work exposes a wider subsystem issue, hand off to **Mid** with the required packet.
+- If local work exposes a system-shape issue, hand off to **Blast** with the required packet.
+- If the local change is complete, hand off to **T1 structural** first with the required packet.
+- You may recommend a fix that would work from your local vantage, but mark it as advice only.
+- Do **not** decide, merge, or silently apply subsystem or architecture fixes that belong to **Mid** or **Blast**.
+- Call out the files changed and any local assumption you had to make.
